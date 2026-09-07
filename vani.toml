@@ -1,0 +1,12 @@
+[package]
+name        = "http"
+version     = "0.1.0"
+entry       = "src/lib.vani"
+authors     = "enthusiasticgeek"
+license     = "Apache-2.0"
+description = "Minimal HTTP/1.1 request/response build+parse (GET/POST, headers, Content-Length body framing -- no chunked transfer-encoding), pure vani, hardware-agnostic and heap-free. Operates on a standalone [u8;512] buffer, same bounded-message precedent as DHCP (vani-netstack). Transport-agnostic -- pairs naturally with an existing TLS 1.3 stack for HTTPS, or plain TCP for HTTP."
+registry    = "kosh"
+
+[deps]
+# No external deps -- built entirely on vani builtins (Str/str_len_bytes/
+# str_byte_at, fixed [T; N] arrays).

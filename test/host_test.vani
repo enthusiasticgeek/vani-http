@@ -1,0 +1,11 @@
+// Host-runnable validation for http. Run with:
+//   vanic run test/host_test.vani
+//   vanic run test/host_test.vani --backend=c
+
+use "../src/lib.vani";
+
+fn main() -> i64 {
+  assert http_self_test() == 1;
+  print "http: request/response build+parse self-test PASS";
+  return 0;
+}
